@@ -18,3 +18,4 @@ dist/
 staticfiles/
 
 .idea
+/turbine-website.iml

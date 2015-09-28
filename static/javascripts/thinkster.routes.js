@@ -16,6 +16,14 @@
       controller: 'LandingController',
       controllerAs: 'vm',
       templateUrl: '/static/templates/landing/landing.html'
+    }).when('/features', {
+      templateUrl: '/static/templates/features/features.html',
+      title: 'Turbine | Features'
+    }).when('/about-us', {
+      controller: 'AboutUsController',
+      controllerAs: 'vm',
+      templateUrl: '/static/templates/aboutus/aboutus.html',
+      title: 'Turbine | About Us'
     }).when('/register', {
       controller: 'RegisterController', 
       controllerAs: 'vm',
@@ -24,11 +32,11 @@
       controller: 'LoginController',
       controllerAs: 'vm',
       templateUrl: '/static/templates/authentication/login.html'
-    }).when('/+:username', {
+    }).when('/user/:username', {
       controller: 'AccountController',
       controllerAs: 'vm',
       templateUrl: '/static/templates/accounts/account.html'
-    }).when('/+:username/settings', {
+    }).when('/user/:username/settings', {
       controller: 'AccountSettingsController',
       controllerAs: 'vm',
       templateUrl: '/static/templates/accounts/settings.html'
