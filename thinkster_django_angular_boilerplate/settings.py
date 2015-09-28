@@ -40,7 +40,7 @@ INSTALLED_APPS = (
     'rest_framework',
     'compressor',
     'authentication',
-    'posts',
+    # 'posts',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -101,6 +101,10 @@ STATICFILES_FINDERS = (
 )
 
 COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)
+
+COMPRESS_PRECOMPILERS = (
+    ('text/less', 'lessc {infile} {outfile}'),
+)
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),

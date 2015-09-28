@@ -7,8 +7,7 @@
       'thinkster.routes',
       'thinkster.accounts',
       'thinkster.authentication',
-      'thinkster.layout',
-      'thinkster.posts',
+        'thinkster.landing',
       'thinkster.utils'
     ]);
 
