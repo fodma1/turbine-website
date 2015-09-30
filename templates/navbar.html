@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default" role="navigation" ng-controller="NavbarController as vm">
+<nav id="turbine-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="NavbarController as vm">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#we-are-borg-navbar">
@@ -15,7 +15,9 @@
           <li><a href="/features">Features</a></li>
           <li><a href="/studies">Studies</a></li>
           <li><a href="/about-us">About Us</a></li>
-          <li><a class="btn-warning" href="">Sign Up For Beta</a></li>
+      </ul>
+      <ul class="nav navbar-nav pull-right">
+          <li><a class="btn btn-warning btn-cta btn-navbar" href="">Sign Up For Beta</a></li>
       </ul>
 {#      <ul class="nav navbar-nav pull-right">#}
 {#        {% if user.is_authenticated %}#}
