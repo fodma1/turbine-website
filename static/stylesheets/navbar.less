@@ -1,7 +1,24 @@
+@import 'common.less';
+
 #turbine-navbar {
-  background-color: midnightblue;
+  background-color: dimgrey;
+
+  .navbar-element {
+    color: @turbine-color;
+
+    font-size: 28px;
+    padding-top: 23px;
+
+    &:hover {
+      color: cyan;
+    }
+  }
 
   .btn-navbar {
     padding: 8px 30px;
+  }
+
+  .navbar-logo {
+    height: 30px;
   }
 }

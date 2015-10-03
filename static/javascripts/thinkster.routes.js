@@ -16,9 +16,9 @@
       controller: 'LandingController',
       controllerAs: 'vm',
       templateUrl: '/static/templates/landing/landing.html'
-    }).when('/features', {
-      templateUrl: '/static/templates/features/features.html',
-      title: 'Turbine | Features'
+    }).when('/solutions', {
+      templateUrl: '/static/templates/solutions/solutions.html',
+      title: 'Turbine | Solutions'
     }).when('/about-us', {
       controller: 'AboutUsController',
       controllerAs: 'vm',
