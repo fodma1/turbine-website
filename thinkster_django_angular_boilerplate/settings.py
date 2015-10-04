@@ -123,3 +123,5 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = ['*']
 
 AUTH_USER_MODEL = 'authentication.Account'
+
+MAILGUN_API_KEY = os.environ.get('MAILGUN_API_KEY', '')
