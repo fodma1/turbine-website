@@ -19,6 +19,9 @@
     }).when('/solutions', {
       templateUrl: '/static/templates/solutions/solutions.html',
       title: 'Turbine | Solutions'
+    }).when('/background', {
+      templateUrl: '/static/templates/background.html',
+      title: 'Turbine | Background'
     }).when('/about-us', {
       controller: 'AboutUsController',
       controllerAs: 'vm',

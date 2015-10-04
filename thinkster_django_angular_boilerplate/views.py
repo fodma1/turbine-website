@@ -18,7 +18,7 @@ def contact_us(request):
         'https://api.mailgun.net/v3/sandboxdbf93f180e6e40ffbb8eafbc80fbc2d3.mailgun.org/messages',
         auth=('api', settings.MAILGUN_API_KEY),
         data={'from': 'Mailgun Sandbox <postmaster@sandboxdbf93f180e6e40ffbb8eafbc80fbc2d3.mailgun.org>',
-              'to': 'Matyas <matyas.fodor@gmail.com>, Turbine <turbines@googlegroups.com>',
+              'to': 'Matyas <matyas.fodor@gmail.com>',
               'subject': 'Contact form',
               'text': 'Name: {name}\nEmail: {email}\n\nMessage:{message}'.format(name=name, email=email, message=message)})
 
