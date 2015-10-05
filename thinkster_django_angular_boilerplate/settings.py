@@ -125,3 +125,7 @@ ALLOWED_HOSTS = ['*']
 AUTH_USER_MODEL = 'authentication.Account'
 
 MAILGUN_API_KEY = os.environ.get('MAILGUN_API_KEY', '')
+MAILGUN_DOMAIN = os.environ.get('MAILGUN_DOMAIN', '')
+MAILGUN_SMTP_LOGIN = os.environ.get('MAILGUN_SMTP_LOGIN', '')
+
+MAILGUN_API_URL = "https://api:{api_key}@api.mailgun.net/v2/{mailgun_domain}".format(api_key=MAILGUN_API_KEY, mailgun_domain=MAILGUN_DOMAIN)

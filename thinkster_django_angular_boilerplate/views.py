@@ -13,28 +13,19 @@ def contact_us(request):
     name = data['name']
     email = data['email']
     message = data['message']
-    
+
+    compiled_message = 'Name: {name}\nEmail: {email}\n\nMessage:{message}'.format(name=name, email=email, message=message)
+
     response = requests.post(
-        'https://api.mailgun.net/v3/sandboxdbf93f180e6e40ffbb8eafbc80fbc2d3.mailgun.org/messages',
-        auth=('api', settings.MAILGUN_API_KEY),
-        data={'from': 'Mailgun Sandbox <postmaster@sandboxdbf93f180e6e40ffbb8eafbc80fbc2d3.mailgun.org>',
+        settings.MAILGUN_API_URL + '/messages',
+        data={'from': 'Mailgun Sandbox <{sender}>'.format(sender=settings.MAILGUN_SMTP_LOGIN),
               'to': 'Matyas <matyas.fodor@gmail.com>',
-              'subject': 'Contact form',
-              'text': 'Name: {name}\nEmail: {email}\n\nMessage:{message}'.format(name=name, email=email, message=message)})
+              'subject': 'New contact message',
+              'text': compiled_message})
 
     response.raise_for_status()
 
-    return HttpResponse
-
-
-def send_simple_message(request):
-    return requests.post(
-        'https://api.mailgun.net/v3/sandboxdbf93f180e6e40ffbb8eafbc80fbc2d3.mailgun.org/messages',
-        auth=('api', 'key-385acf1d49046d4fee3665e639f1b6fb'),
-        data={'from': 'Mailgun Sandbox <postmaster@sandboxdbf93f180e6e40ffbb8eafbc80fbc2d3.mailgun.org>',
-              'to': 'Matyas <matyas.fodor@gmail.com>',
-              'subject': 'Hello Matyas',
-              'text': 'Congratulations Matyas, you just sent an email with Mailgun!  You are truly awesome!  You can see a record of this email in your logs: https://mailgun.com/cp/log .  You can send up to 300 emails/day from this sandbox server.  Next, you should add your own domain so you can send 10,000 emails/month for free.'})
+    return HttpResponse()
 
 
 class IndexView(TemplateView):
