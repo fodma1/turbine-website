@@ -124,6 +124,8 @@ ALLOWED_HOSTS = ['*']
 
 AUTH_USER_MODEL = 'authentication.Account'
 
+EMAIL_RECIPIENTS = os.environ.get('EMAIL_RECIPIENTS', '')
+
 MAILGUN_API_KEY = os.environ.get('MAILGUN_API_KEY', '')
 MAILGUN_DOMAIN = os.environ.get('MAILGUN_DOMAIN', '')
 MAILGUN_SMTP_LOGIN = os.environ.get('MAILGUN_SMTP_LOGIN', '')

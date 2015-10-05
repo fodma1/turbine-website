@@ -19,7 +19,7 @@ def contact_us(request):
     response = requests.post(
         settings.MAILGUN_API_URL + '/messages',
         data={'from': 'Mailgun Sandbox <{sender}>'.format(sender=settings.MAILGUN_SMTP_LOGIN),
-              'to': 'Matyas <matyas.fodor@gmail.com>',
+              'to': settings.EMAIL_RECIPIENTS,
               'subject': 'New contact message',
               'text': compiled_message})
 
