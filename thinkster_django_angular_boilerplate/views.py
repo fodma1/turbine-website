@@ -1,7 +1,7 @@
 import requests
 import json
-import settings
 
+from django.conf import settings
 from django.http import HttpResponse
 from django.views.decorators.csrf import ensure_csrf_cookie
 from django.views.generic.base import TemplateView
