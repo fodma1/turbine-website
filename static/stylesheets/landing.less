@@ -80,6 +80,11 @@ img {
     padding: 10px 35px;
   }
   
+  .title {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
   img {
     display:block;
     margin:auto;
@@ -115,6 +120,11 @@ img {
 #features {
   .section {
     margin: 30px;
+  }
+  
+  img
+  {
+   float:right;
   }
 }
 
@@ -161,7 +171,8 @@ img {
    background: url("/static/images/background.png");
    background-position: 20% 20%;
    vertical-align:middle;
-
+   color:white;
+   
    .col-xs-12
    {
       height: 300px;
@@ -172,14 +183,12 @@ img {
       height: 150px;
    }
    
-   .cta-btn-wrapper 
-   
-       .col-xs-12
+   .cta-btn-wrapper .col-xs-12
     {
       height: auto;
     }
-   a {
     
-      width: 400px;
+   .btn-cta-secondary:hover {
+      color: @turbine-color;
     }
 }
